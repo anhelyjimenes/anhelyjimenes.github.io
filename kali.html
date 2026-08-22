@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kali Linux 2026.2 en VirtualBox</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: #eaf2ff;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #0b263d;
+      padding: 55px 25px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 45px;
+      border-bottom: 1px solid #29425a;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: #25d5ca;
+    }
+
+    p, li {
+      color: #cbd7e5;
+    }
+
+    .box {
+      background: #102033;
+      border-left: 4px solid #25d5ca;
+      padding: 18px;
+      margin: 18px 0;
+      border-radius: 6px;
+    }
+
+    .warning {
+      background: #2a2114;
+      border-left: 4px solid #e7a83e;
+      padding: 18px;
+      margin: 18px 0;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+      border-top: 1px solid #29425a;
+      color: #8193a8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Kali Linux 2026.2 en Oracle VM VirtualBox</h1>
+    <p>
+      Manual de preparación y configuración de Kali Linux para prácticas de
+      Seguridad Informática.
+    </p>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2>1. Objetivo</h2>
+  <p>
+    Preparar Kali Linux 2026.2 como máquina virtual dentro de Oracle VM VirtualBox,
+    dejando el entorno listo para futuras prácticas académicas de Seguridad Informática.
+  </p>
+
+  <h2>2. Tipo de instalación utilizada</h2>
+  <p>
+    En este caso Kali Linux no se instaló desde una imagen ISO como Ubuntu.
+    Se utilizó una máquina virtual ya preparada específicamente para VirtualBox.
+  </p>
+
+  <div class="box">
+    Kali Linux Rolling 2026.2<br>
+    Arquitectura: AMD64 / 64 bits<br>
+    Tipo: máquina virtual preparada para VirtualBox
+  </div>
+
+  <h2>3. Archivos utilizados</h2>
+  <p>
+    Después de extraer la descarga de Kali se obtuvieron los archivos principales
+    de la máquina virtual:
+  </p>
+
+  <div class="box">
+    kali-linux-2026.2-virtualbox-amd64.vbox<br>
+    kali-linux-2026.2-virtualbox-amd64.vdi
+  </div>
+
+  <p>
+    El archivo <strong>.vbox</strong> contiene la configuración de la máquina virtual,
+    mientras que el archivo <strong>.vdi</strong> corresponde al disco duro virtual.
+  </p>
+
+  <h2>4. Incorporación de Kali a VirtualBox</h2>
+
+  <h3>Paso 1. Abrir la carpeta de Kali</h3>
+  <p>
+    Se accedió a la carpeta donde se encontraban los archivos extraídos de Kali Linux.
+  </p>
+
+  <h3>Paso 2. Abrir el archivo .vbox</h3>
+  <p>
+    Se ejecutó el archivo:
+  </p>
+
+  <div class="box">
+    kali-linux-2026.2-virtualbox-amd64.vbox
+  </div>
+
+  <p>
+    VirtualBox reconoció automáticamente la máquina virtual y la agregó a la lista
+    de máquinas disponibles.
+  </p>
+
+  <h2>5. Configuración detectada</h2>
+
+  <div class="box">
+    Nombre: kali-linux-2026.2-virtualbox-amd64<br>
+    Sistema detectado: Debian (64-bit)<br>
+    Memoria RAM: 2048 MB<br>
+    Procesadores: 2 CPU<br>
+    Memoria de vídeo: 128 MB<br>
+    Controlador gráfico: VMSVGA<br>
+    Disco virtual: 80.09 GB<br>
+    Red: NAT
+  </div>
+
+  <p>
+    Esta configuración fue reconocida automáticamente por VirtualBox al cargar
+    la máquina preparada de Kali Linux.
+  </p>
+
+  <h2>6. Configuración de almacenamiento</h2>
+  <p>
+    VirtualBox reconoció el disco virtual asociado a Kali:
+  </p>
+
+  <div class="box">
+    kali-linux-2026.2-virtualbox-amd64.vdi
+  </div>
+
+  <p>
+    El disco se encontraba conectado mediante un controlador SATA.
+  </p>
+
+  <h2>7. Configuración de red</h2>
+  <p>
+    La máquina virtual quedó configurada utilizando el modo de red:
+  </p>
+
+  <div class="box">
+    NAT
+  </div>
+
+  <p>
+    Esta configuración permite que Kali utilice la conexión a Internet del
+    equipo anfitrión sin exponer directamente la máquina virtual a la red física.
+  </p>
+
+  <h2>8. Primer inicio de Kali Linux</h2>
+
+  <h3>Paso 3. Iniciar la máquina virtual</h3>
+  <p>
+    Con Kali seleccionada en VirtualBox se presionó el botón
+    <strong>Iniciar</strong>.
+  </p>
+
+  <p>
+    Kali Linux comenzó el proceso de arranque y posteriormente mostró la pantalla
+    de inicio de sesión.
+  </p>
+
+  <h2>9. Inicio de sesión</h2>
+  <p>
+    La imagen preparada de Kali Linux incluía las siguientes credenciales iniciales:
+  </p>
+
+  <div class="box">
+    Usuario: kali<br>
+    Contraseña inicial: kali
+  </div>
+
+  <div class="warning">
+    La contraseña predeterminada debe cambiarse posteriormente si la máquina
+    va a conservarse para uso continuo.
+  </div>
+
+  <h2>10. Acceso al escritorio</h2>
+  <p>
+    Después de iniciar sesión se accedió correctamente al escritorio gráfico
+    de Kali Linux.
+  </p>
+
+  <p>
+    Con esto se verificó que la máquina virtual arrancaba correctamente dentro
+    de Oracle VM VirtualBox.
+  </p>
+
+  <h2>11. Comprobación básica de red</h2>
+  <p>
+    Para validar la conectividad puede abrirse una terminal y ejecutar:
+  </p>
+
+  <div class="box">
+    ping -c 4 8.8.8.8
+  </div>
+
+  <p>
+    Si se reciben respuestas, significa que la máquina tiene conectividad IP.
+  </p>
+
+  <h2>12. Actualización del sistema</h2>
+  <p>
+    Una vez comprobada la conectividad, se recomienda actualizar la información
+    de los repositorios:
+  </p>
+
+  <div class="box">
+    sudo apt update
+  </div>
+
+  <p>
+    Después puede actualizarse el sistema con:
+  </p>
+
+  <div class="box">
+    sudo apt full-upgrade -y
+  </div>
+
+  <div class="warning">
+    No apagar la máquina virtual ni interrumpir el proceso mientras se estén
+    instalando actualizaciones.
+  </div>
+
+  <h2>13. Uso previsto de Kali Linux</h2>
+  <p>
+    Kali Linux será utilizado principalmente como máquina de trabajo para
+    prácticas de Seguridad Informática.
+  </p>
+
+  <p>
+    Entre sus posibles usos académicos se encuentran:
+  </p>
+
+  <ul>
+    <li>Análisis de redes.</li>
+    <li>Comprobación de conectividad.</li>
+    <li>Escaneo de servicios dentro de laboratorios autorizados.</li>
+    <li>Prácticas de seguridad sobre máquinas virtuales propias.</li>
+  </ul>
+
+  <div class="warning">
+    Las herramientas de Kali deben utilizarse únicamente en equipos,
+    redes y servicios propios o expresamente autorizados.
+  </div>
+
+  <h2>14. Exportación como archivo OVA</h2>
+  <p>
+    Para transportar la máquina virtual a otro equipo se puede exportar
+    Kali Linux como archivo OVA.
+  </p>
+
+  <h3>Paso 4. Apagar Kali Linux</h3>
+  <p>
+    Antes de exportar, la máquina virtual debe encontrarse completamente apagada.
+  </p>
+
+  <h3>Paso 5. Abrir la opción de exportación</h3>
+  <p>
+    En VirtualBox se selecciona:
+  </p>
+
+  <div class="box">
+    Archivo → Exportar servicio virtualizado
+  </div>
+
+  <h3>Paso 6. Seleccionar Kali Linux</h3>
+  <p>
+    Se selecciona únicamente la máquina Kali Linux que se desea exportar.
+  </p>
+
+  <h3>Paso 7. Elegir el formato OVA</h3>
+  <p>
+    Se utiliza Open Virtualization Format y un nombre de archivo terminado en:
+  </p>
+
+  <div class="box">
+    .ova
+  </div>
+
+  <p>
+    El archivo puede guardarse directamente en un disco duro externo para
+    transportarlo al aula.
+  </p>
+
+  <h2>15. Recomendaciones para el respaldo</h2>
+  <p>
+    Junto con el archivo OVA se recomienda conservar:
+  </p>
+
+  <ul>
+    <li>El instalador de la versión de VirtualBox utilizada.</li>
+    <li>El manual de Kali Linux.</li>
+    <li>El archivo OVA de Ubuntu.</li>
+    <li>La documentación correspondiente al laboratorio.</li>
+  </ul>
+
+  <h2>16. Estado final</h2>
+
+  <div class="box">
+    Kali Linux 2026.2 incorporada a VirtualBox: COMPLETADO<br>
+    Disco virtual reconocido: COMPLETADO<br>
+    Configuración NAT: COMPLETADO<br>
+    Inicio de sesión y escritorio: COMPROBADO<br>
+    Exportación OVA: PENDIENTE DE FINALIZAR
+  </div>
+
+  <h2>17. Conclusión</h2>
+  <p>
+    Kali Linux 2026.2 quedó correctamente incorporado a Oracle VM VirtualBox
+    y preparado como entorno virtual para las futuras prácticas del curso
+    de Seguridad Informática.
+  </p>
+
+</main>
+
+<footer>
+  Manual de Kali Linux 2026.2 · Seguridad Informática
+</footer>
+
+</body>
+</html>
