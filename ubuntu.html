@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instalación de Ubuntu 20.04.6 LTS</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #07111f;
+      color: #eaf2ff;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #0b263d;
+      padding: 55px 25px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 45px;
+      border-bottom: 1px solid #29425a;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: #25d5ca;
+    }
+
+    p, li {
+      color: #cbd7e5;
+    }
+
+    .box {
+      background: #102033;
+      border-left: 4px solid #25d5ca;
+      padding: 18px;
+      margin: 18px 0;
+      border-radius: 6px;
+    }
+
+    .warning {
+      background: #2a2114;
+      border-left: 4px solid #e7a83e;
+      padding: 18px;
+      margin: 18px 0;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+      border-top: 1px solid #29425a;
+      color: #8193a8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1>Instalación de Ubuntu 20.04.6 LTS</h1>
+    <p>Manual paso a paso en Oracle VM VirtualBox para prácticas de Seguridad Informática.</p>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2>1. Objetivo</h2>
+  <p>
+    Instalar y configurar Ubuntu 20.04.6 LTS en una máquina virtual utilizando
+    Oracle VM VirtualBox, dejando el sistema preparado para futuras prácticas.
+  </p>
+
+  <h2>2. Archivo ISO utilizado</h2>
+  <div class="box">
+    <strong>ubuntu-20.04.6-desktop-amd64.iso</strong>
+  </div>
+
+  <p>
+    La imagen ISO fue descargada y posteriormente utilizada como medio de
+    instalación dentro de VirtualBox.
+  </p>
+
+  <h2>3. Creación de la máquina virtual</h2>
+
+  <h3>Paso 1. Crear una nueva máquina</h3>
+  <p>
+    En Oracle VM VirtualBox se seleccionó la opción <strong>Nueva</strong>.
+  </p>
+
+  <div class="box">
+    Nombre: Ubuntu 20.04.6<br>
+    Tipo: Linux<br>
+    Versión: Ubuntu (64-bit)
+  </div>
+
+  <h3>Paso 2. Asignar memoria RAM</h3>
+  <p>
+    Se asignaron <strong>4096 MB de memoria RAM</strong>.
+  </p>
+
+  <h3>Paso 3. Crear el disco virtual</h3>
+  <p>
+    Se seleccionó la opción <strong>Crear un disco duro virtual ahora</strong>.
+  </p>
+
+  <div class="box">
+    Tipo: VDI (VirtualBox Disk Image)<br>
+    Almacenamiento: reservado dinámicamente<br>
+    Tamaño: 30 GB
+  </div>
+
+  <h3>Paso 4. Configurar el procesador</h3>
+  <p>
+    En Sistema → Procesador se asignaron <strong>2 CPU</strong>.
+  </p>
+
+  <h2>4. Configuración de pantalla</h2>
+  <p>
+    Para mejorar la visualización del instalador se ajustó la configuración gráfica.
+  </p>
+
+  <div class="box">
+    Memoria de vídeo: 128 MB<br>
+    Controlador gráfico: VMSVGA<br>
+    Monitores: 1
+  </div>
+
+  <h2>5. Montaje de la imagen ISO</h2>
+  <p>
+    Desde Configuración → Almacenamiento se seleccionó la unidad óptica virtual
+    y se cargó:
+  </p>
+
+  <div class="box">
+    ubuntu-20.04.6-desktop-amd64.iso
+  </div>
+
+  <h2>6. Inicio de la instalación</h2>
+  <p>
+    Se inició la máquina virtual y, en la pantalla inicial de Ubuntu,
+    se seleccionó el idioma <strong>Español</strong>.
+  </p>
+
+  <p>
+    Luego se seleccionó:
+  </p>
+
+  <div class="box">
+    <strong>Instalar Ubuntu</strong>
+  </div>
+
+  <h2>7. Configuración del teclado</h2>
+  <p>
+    Se seleccionó la distribución:
+  </p>
+
+  <div class="box">
+    <strong>Spanish (Latin American)</strong>
+  </div>
+
+  <p>
+    Se verificó el funcionamiento de caracteres especiales antes de continuar.
+  </p>
+
+  <h2>8. Actualizaciones y software</h2>
+  <p>
+    Se utilizó la configuración:
+  </p>
+
+  <ul>
+    <li>Instalación normal.</li>
+    <li>Descargar actualizaciones al instalar Ubuntu.</li>
+    <li>Instalar programas de terceros.</li>
+  </ul>
+
+  <h2>9. Tipo de instalación</h2>
+
+  <div class="box">
+    <strong>Borrar disco e instalar Ubuntu</strong>
+  </div>
+
+  <div class="warning">
+    Esta opción afectó únicamente al disco virtual de 30 GB creado para Ubuntu,
+    no al disco físico de Windows.
+  </div>
+
+  <h2>10. Confirmación de particiones</h2>
+  <p>
+    Ubuntu mostró la confirmación para escribir los cambios en el disco virtual.
+    Se revisó la información y se seleccionó <strong>Continuar</strong>.
+  </p>
+
+  <h2>11. Zona horaria</h2>
+  <p>
+    Se seleccionó <strong>Lima</strong> como ubicación y zona horaria.
+  </p>
+
+  <h2>12. Creación del usuario</h2>
+  <p>
+    Se creó la cuenta de usuario para iniciar sesión en Ubuntu.
+  </p>
+
+  <ul>
+    <li>Nombre de usuario configurado.</li>
+    <li>Nombre del equipo configurado.</li>
+    <li>Contraseña de acceso definida.</li>
+    <li>Se seleccionó solicitar contraseña al iniciar sesión.</li>
+  </ul>
+
+  <div class="warning">
+    Las contraseñas no deben publicarse en GitHub ni mostrarse en documentación pública.
+  </div>
+
+  <h2>13. Proceso de instalación</h2>
+  <p>
+    Ubuntu realizó la copia de archivos, instalación de paquetes y configuración
+    del sistema operativo.
+  </p>
+
+  <h2>14. Reinicio</h2>
+  <p>
+    Al finalizar la instalación se seleccionó <strong>Reiniciar ahora</strong>.
+  </p>
+
+  <p>
+    Posteriormente apareció el mensaje:
+  </p>
+
+  <div class="box">
+    Please remove the installation medium, then press ENTER
+  </div>
+
+  <p>
+    Se retiró el medio de instalación virtual y se continuó con el reinicio.
+  </p>
+
+  <h2>15. Configuración inicial</h2>
+  <p>
+    Durante el primer inicio se revisaron las opciones de:
+  </p>
+
+  <ul>
+    <li>Cuentas en línea.</li>
+    <li>Livepatch.</li>
+    <li>Privacidad.</li>
+    <li>Servicios de ubicación.</li>
+  </ul>
+
+  <h2>16. Resultado final</h2>
+  <p>
+    Ubuntu 20.04.6 LTS inició correctamente y se accedió al escritorio.
+  </p>
+
+  <div class="box">
+    Sistema operativo: Ubuntu 20.04.6 LTS<br>
+    Arquitectura: 64 bits AMD64<br>
+    RAM: 4096 MB<br>
+    CPU: 2 procesadores<br>
+    Disco virtual: 30 GB VDI<br>
+    Red: NAT<br>
+    Vídeo: 128 MB
+  </div>
+
+  <h2>17. Conclusión</h2>
+  <p>
+    La instalación de Ubuntu se completó correctamente dentro de Oracle VM VirtualBox.
+    La máquina virtual quedó preparada para ser utilizada en prácticas de Seguridad Informática.
+  </p>
+
+</main>
+
+<footer>
+  Manual de instalación de Ubuntu 20.04.6 LTS · Seguridad Informática
+</footer>
+
+</body>
+</html>
